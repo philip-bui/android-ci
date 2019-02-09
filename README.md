@@ -10,7 +10,7 @@ Use `philipbui/android-ci` as your Docker image.
 
 ### Build
 
-```
+```yaml
 script:
   - ./gradlew clean assembleRelease
 
@@ -20,7 +20,7 @@ artifacts:
 
 ### Unit Tests
 
-```
+```yaml
 script:
   - ./gradlew test
   
@@ -30,7 +30,7 @@ artifacts:
 
 ### Instrumentation Tests
 
-```
+```yaml
 script:
   - echo no|avdmanager -s create avd -n test -f -k "system-images;android-25;google_apis;arm64-v8a"
   - emulator -avd test -no-audio -no-window & source <(curl -sSL https://raw.githubusercontent.com/philip-bui/android-ci/master/wait-for-emulator.sh)
