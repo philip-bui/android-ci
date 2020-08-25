@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-slim
+FROM openjdk:14-jdk-slim
 LABEL maintainer="philip.bui.developer@gmail.com"
 
 RUN apt-get update -q && \
